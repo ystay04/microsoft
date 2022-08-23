@@ -1,0 +1,764 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body header #nav {
+  width: 100%;
+  height: 54px;
+}
+body header #nav nav {
+  display: flex;
+  justify-content: space-around;
+}
+body header #nav nav .burger-logo {
+  display: none;
+}
+body header #nav nav .logo-options {
+  width: 800px;
+  height: 54px;
+  display: flex;
+}
+body header #nav nav .logo-options .logo {
+  width: 150px;
+  background-image: url("../image/logo.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+body header #nav nav .logo-options .logo:active {
+  border: 1px dashed #000;
+}
+body header #nav nav .logo-options ul {
+  width: 450px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+}
+body header #nav nav .logo-options ul a {
+  display: block;
+  position: relative;
+  color: black;
+  font-size: 14px;
+  list-style-type: none;
+  text-decoration: none;
+}
+body header #nav nav .logo-options ul a li {
+  padding: 15px 2px;
+}
+body header #nav nav .logo-options ul a li::before {
+  content: "";
+  width: 95%;
+  height: 3px;
+  background-color: black;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10px;
+  display: none;
+}
+body header #nav nav .logo-options ul a:hover li::before {
+  border: radius 15px;
+  display: block;
+}
+body header #nav nav .logo-options ul a:active {
+  border: 1px dashed #000;
+}
+body header #nav nav .menu {
+  width: 600px;
+  height: 54px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body header #nav nav .menu .mov {
+  display: flex;
+}
+body header #nav nav .menu .mov .microsoft-menu {
+  position: relative;
+}
+body header #nav nav .menu .mov .microsoft-menu p {
+  margin: 0px 0px 10px 0px;
+}
+body header #nav nav .menu .mov .microsoft-menu .all-list {
+  width: 1230px;
+  height: 455.5px;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 52px;
+  left: -937px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+body header #nav nav .menu .mov .microsoft-menu .all-list ul {
+  width: 16.6666666667%;
+  height: calc(100% - 38px);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #262626;
+}
+body header #nav nav .menu .mov .microsoft-menu .all-list ul:last-child {
+  width: 100%;
+  height: 38px;
+  background-color: #e6e6e6;
+  text-align: center;
+  line-height: 38px;
+  border-bottom: 2px solid black;
+  display: block;
+}
+body header #nav nav .menu .mov .microsoft-menu .all-list span {
+  padding: 18px 0px;
+  padding-left: 24px;
+  font-weight: 900;
+}
+body header #nav nav .menu .mov .microsoft-menu .all-list li {
+  padding: 12px 0px;
+  padding-left: 24px;
+  list-style-type: none;
+}
+body header #nav nav .menu .mov .microsoft-menu #list {
+  display: none;
+}
+body header #nav nav .menu .mov .microsoft-menu #list:checked + .all-list {
+  display: flex;
+}
+body header #nav nav .menu .mov .search {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  margin-left: 15px;
+}
+body header #nav nav .menu .mov .search a {
+  color: #000;
+  width: 110px;
+  height: 30px;
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+}
+body header #nav nav .menu .mov .search a:active {
+  border: 1px dashed #000;
+}
+body header #nav nav .menu .search-box {
+  width: 270px;
+  margin-left: 10px;
+  display: flex;
+}
+body header #nav nav .menu .search-box .shopping-cart {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  margin-right: 15px;
+}
+body header #nav nav .menu .search-box a,
+body header #nav nav .menu .search-box p {
+  color: #000;
+  width: 110px;
+  height: 30px;
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+}
+body header #nav nav .menu .search-box a:active,
+body header #nav nav .menu .search-box p:active {
+  border: 1px dashed #000;
+}
+body header #nav nav .menu .search-box .member {
+  width: 80px;
+  height: 30px;
+  background-image: url("../image/name.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 30px;
+}
+@media (max-width: 1399px) {
+  body header #nav nav .logo-options {
+    padding: 0px 60px;
+  }
+  body header #nav nav .menu {
+    padding-right: 55px;
+  }
+  body header #nav nav .menu .mov .microsoft-menu .all-list {
+    top: 40px;
+    left: -947px;
+  }
+  body header #nav nav .menu .mov .search {
+    width: 20px;
+    line-height: 2;
+  }
+  body header #nav nav .menu .mov .search a {
+    display: none;
+  }
+  body header #nav nav .menu .search-box {
+    width: 130px;
+  }
+  body header #nav nav .menu .search-box .shopping-cart {
+    width: 20px;
+    line-height: 2;
+  }
+  body header #nav nav .menu .search-box .shopping-cart a {
+    display: none;
+  }
+  body header #nav nav .menu .search-box .member {
+    width: 40px;
+  }
+  body header #nav nav .menu .search-box .member a {
+    display: none;
+  }
+}
+@media (max-width: 1084px) {
+  body header #nav nav .logo-options {
+    width: 60%;
+    padding: 0px;
+  }
+  body header #nav nav .logo-options .logo {
+    width: 165px;
+  }
+  body header #nav nav .logo-options ul {
+    width: 420px;
+  }
+  body header #nav nav .menu {
+    width: 40%;
+    padding: 20px 0px 20px 0px;
+  }
+  body header #nav nav .menu .mov .microsoft-menu p {
+    font-size: 14px;
+  }
+  body header #nav nav .menu .mov .microsoft-menu .all-list {
+    width: 820px;
+    height: 825.5px;
+    display: flex;
+    justify-content: flex-start;
+    top: 52px;
+    left: -687px;
+    display: none;
+  }
+  body header #nav nav .menu .mov .microsoft-menu .all-list ul {
+    width: 25%;
+    height: calc((100% - 38px) / 2);
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 860px) {
+  body header #nav nav {
+    position: relative;
+  }
+  body header #nav nav .burger-logo {
+    display: inline;
+    margin: 8px 5px;
+    font-size: 25px;
+    width: 20px;
+    height: 20px;
+  }
+  body header #nav nav .burger-logo #burger {
+    display: none;
+  }
+  body header #nav nav .burger-logo ul {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    z-index: 5;
+  }
+  body header #nav nav .burger-logo ul li {
+    margin: 1px;
+    padding: 14px 24px 15px 15px;
+  }
+  body header #nav nav .burger-logo ul li:active {
+    border: 1px dashed black;
+  }
+  body header #nav nav .burger-logo ul li a {
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+  }
+  body header #nav nav .logo-options {
+    width: unset;
+    position: absolute;
+  }
+  body header #nav nav .logo-options ul {
+    display: none;
+  }
+  body header #nav nav .menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  body header #nav nav .menu .mov .microsoft-menu label {
+    display: none;
+  }
+}
+body main #carousel picture {
+  position: relative;
+}
+body main #carousel picture .box {
+  position: absolute;
+  padding: 48px;
+  top: -408px;
+  left: 148px;
+  width: 437px;
+  height: 213px;
+}
+body main #carousel picture .box .new-listing {
+  width: 72px;
+  height: 28px;
+  background-color: #ffb900;
+  font-weight: 600;
+  padding: 2px 0px 0px 11px;
+}
+body main #carousel picture .box .title {
+  font-size: 2.3125rem;
+  font-family: inherit;
+  margin: 18px 0px 18px 0px;
+}
+body main #carousel picture .box .content {
+  margin-bottom: 20px;
+}
+body main #carousel picture .box .learn {
+  width: 92px;
+  height: 40px;
+  background-color: #0067B8;
+  padding: 10px 13px;
+}
+body main #carousel picture .box .learn:hover {
+  background-color: #0d5992;
+}
+body main #carousel picture .box a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (max-width: 1399px) {
+  body main #carousel picture .box {
+    top: -456px;
+    left: 50px;
+    width: 400px;
+    height: 314px;
+  }
+}
+@media (max-width: 1084px) {
+  body main #carousel picture {
+    position: relative;
+  }
+  body main #carousel picture .big-box {
+    position: absolute;
+    position: relative;
+    width: 100%;
+    height: 270px;
+    top: -31px;
+    left: 7px;
+    background-color: #fff;
+    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.1);
+  }
+  body main #carousel picture .big-box .box {
+    width: 80%;
+    height: 300px;
+    top: 0px;
+    left: 0px;
+    padding: 48px;
+  }
+  body main #carousel picture .big-box .box .title {
+    font-weight: 600;
+    font-size: 30px;
+  }
+}
+@media (max-width: 1084px) and (max-width: 860px) {
+  body main #carousel picture .big-box .box {
+    left: 0px;
+    padding: 24px 12px 16px 12px;
+    width: 100%;
+  }
+}
+body main #carousel .container {
+  width: 100%;
+  height: 124px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #carousel .container .text-conter {
+  width: 1600px;
+  height: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+body main #carousel .container .text-conter .frame {
+  width: 169px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main #carousel .container .text-conter .frame a {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #0067B8;
+}
+@media (max-width: 540px) {
+  body main #carousel .container {
+    height: 200px;
+  }
+  body main #carousel .container .text-conter {
+    margin: 0px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body main #carousel .container .text-conter .frame {
+    margin: 10px;
+  }
+}
+body main #carousel .product-label {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+body main #carousel .product-label .product {
+  width: 100%;
+  height: 448px;
+  float: left;
+  margin: 10px;
+}
+body main #carousel .product-label .product .word {
+  padding-bottom: 16px;
+}
+body main #carousel .product-label .product .word h2 {
+  margin: 0px 0px 16px 0px;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body main #carousel .product-label .product .button .ture a {
+  color: #0067B8;
+  text-decoration: none;
+  margin: 8px 16px 8px 0px;
+  font-weight: 900;
+}
+body main #carousel .product-label .product .button .ture a span {
+  transition: all 0.5s ease;
+}
+body main #carousel .product-label .product .button .ture a:hover span {
+  margin-right: 5px;
+}
+body main #carousel .product-label .product .button .ture a i {
+  margin-top: 3px;
+}
+@media (max-width: 1399px) {
+  body main #carousel .product {
+    width: 550px;
+    height: 384px;
+  }
+  body main #carousel .product .word h2 {
+    font-size: 25px;
+  }
+  body main #carousel .product .button .ture a {
+    display: flex;
+  }
+}
+@media (max-width: 1084px) {
+  body main #carousel .product-label {
+    padding: 5% 0px;
+    margin: 0px;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body main #carousel .product-label .product {
+    width: 45%;
+  }
+  body main #carousel .product-label .product .word h2 {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  body main #carousel .product-label .product .button .ture {
+    display: flex;
+  }
+}
+@media (max-width: 860px) {
+  body main #carousel .product-label .product {
+    width: 39%;
+  }
+}
+@media (max-width: 540px) {
+  body main #carousel .product-label {
+    height: 1320px;
+  }
+  body main #carousel .product-label .product {
+    width: 90%;
+  }
+}
+body main #carousel .mic-one {
+  width: 100%;
+  padding: 0px 5%;
+  margin: 48px 0px;
+}
+body main #carousel .mic-one picture {
+  position: relative;
+}
+body main #carousel .mic-one picture .box-word {
+  width: 440px;
+  position: absolute;
+  bottom: 120px;
+  left: 50px;
+  padding: 48px;
+  z-index: 2;
+}
+body main #carousel .mic-one picture .box-word .name {
+  font-size: 40px;
+}
+@media (max-width: 1399px) {
+  body main #carousel .mic-one picture .box-word .name {
+    font-size: 30px;
+  }
+}
+body main #carousel .mic-one picture .box-word .understand-deeper {
+  width: 92px;
+  height: 40px;
+  background-color: #0067B8;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #carousel .mic-one picture .box-word .understand-deeper:hover {
+  background-color: #0d5992;
+}
+body main #carousel .mic-one picture .box-word .understand-deeper a {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 1084px) {
+  body main #carousel .mic-one {
+    padding: 50px 0px;
+  }
+  body main #carousel .mic-one picture {
+    position: relative;
+  }
+  body main #carousel .mic-one picture .box-word {
+    position: absolute;
+    padding: 10px 40px;
+    width: calc(100% - 50px);
+    height: 200px;
+    top: -31px;
+    left: 8px;
+    background-color: #fff;
+    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.1);
+  }
+  body main #carousel .mic-one picture .box-word .name {
+    font-size: 25px;
+  }
+}
+@media (max-width: 1084px) and (max-width: 860px) {
+  body main #carousel .mic-one picture .box-word {
+    left: 0px;
+    padding: 24px 12px 16px 12px;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+body main #carousel .business-product {
+  width: 100%;
+  height: 550px;
+  padding: 0px 5%;
+}
+body main #carousel .business-product .business-label h2 {
+  width: 100%;
+  font-size: 40px;
+}
+@media (max-width: 1399px) {
+  body main #carousel .business-product .business-label h2 {
+    font-size: 30px;
+  }
+}
+body main #carousel .business-product .label {
+  display: flex;
+  justify-content: space-between;
+}
+body main #carousel .business-product .label .business {
+  width: 22.5%;
+  height: 448px;
+  margin-right: 5px;
+}
+body main #carousel .business-product .label .business .new-word {
+  width: 72px;
+  height: 28px;
+  background-color: #ffb900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+}
+body main #carousel .business-product .label .business .word:nth-child(2) {
+  padding-top: 28px;
+}
+body main #carousel .business-product .label .business .word h2 {
+  margin: 0px 0px 16px 0px;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (max-width: 1399px) {
+  body main #carousel .business-product .label .business .word h2 {
+    font-size: 23px;
+  }
+}
+body main #carousel .business-product .label .business .button .ture a {
+  color: #0067B8;
+  text-decoration: none;
+  margin: 0px 16px 0px 0px;
+  font-weight: 900;
+}
+body main #carousel .business-product .label .business .button .ture span {
+  transition: all 0.5s ease;
+}
+body main #carousel .business-product .label .business .button .ture:hover span {
+  margin-right: 5px;
+}
+@media (max-width: 1084px) {
+  body main #carousel .business-product {
+    height: 1030px;
+    padding: 58px 0px 0px 0px;
+  }
+  body main #carousel .business-product .business-label {
+    margin-left: 5%;
+  }
+  body main #carousel .business-product .label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body main #carousel .business-product .label .business {
+    width: 48%;
+  }
+}
+@media (max-width: 860px) {
+  body main #carousel .business-product .label .business {
+    width: 40%;
+  }
+}
+@media (max-width: 540px) {
+  body main #carousel .business-product {
+    height: 1945px;
+  }
+  body main #carousel .business-product .label .business {
+    width: 90%;
+  }
+}
+body main #carousel .community {
+  width: 100%;
+  height: 32px;
+  margin: 0px 0px 30px 0px;
+  padding: 0px 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body main #carousel .community p {
+  font-size: 16px;
+  margin-right: 18px;
+}
+body main #carousel .community i {
+  margin-right: 18px;
+  font-size: 22px;
+}
+body main #carousel .back-text a {
+  font-size: 20px;
+  background-color: #e6e6e6;
+  margin: 5px;
+  padding: 12px;
+  text-decoration: none;
+  color: #000;
+}
+body main #carousel .back-text a:hover {
+  background-color: whitesmoke;
+}
+body .universalfooter {
+  width: 100%;
+  height: 400px;
+  background-color: #f2f2f2;
+  padding: 0px 5%;
+}
+body .universalfooter .all-page {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body .universalfooter .all-page ul {
+  width: 16.6666666667%;
+  height: calc(100% - 38px);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #262626;
+}
+body .universalfooter .all-page ul span {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 36px 0px 4px;
+}
+body .universalfooter .all-page ul li {
+  padding: 8px 0px;
+  font-weight: 200;
+  list-style-type: none;
+}
+body .universalfooter .base {
+  width: 100%;
+  height: 45px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body .universalfooter .base .company-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body .universalfooter .base .company-link li {
+  font-weight: 300;
+  font-size: 12px;
+  margin-right: 12px;
+  list-style-type: none;
+}
+@media (max-width: 1084px) {
+  body .universalfooter {
+    height: 730px;
+  }
+  body .universalfooter .all-page ul {
+    width: 33.3333333333%;
+    height: calc(50% - 45px);
+  }
+}
+@media (max-width: 540px) {
+  body .universalfooter {
+    height: 1720px;
+  }
+  body .universalfooter .all-page ul {
+    width: 100%;
+    height: calc(16.6666666667% - 45px);
+  }
+}/*# sourceMappingURL=microsoft.css.map */
